@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Image } from "react-native";
-import { Styles } from "./Style__Logo";
+import { Styles } from "./Logo.css.js";
 
 const Logo = props => {
   return (

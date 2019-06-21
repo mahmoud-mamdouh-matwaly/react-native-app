@@ -9,13 +9,13 @@ import {
 } from "react-native";
 import SocialMail from "../SocialMail";
 import Logo from "../Logo";
-import { styles } from "./Style__RegisterScreen";
+import { Styles } from "./RegisterScreen.css.js";
 
 export default class Register extends React.Component {
   state = {
     email: "",
     password: "",
-    password_confirmation: "",
+    passwordConfirmation: "",
     errors: "",
     loading: false,
     name: "",
@@ -39,21 +39,21 @@ export default class Register extends React.Component {
   render() {
     const { disabledValue } = this.state;
     const extraButton = disabledValue
-      ? styles.disabledButton
-      : styles.enabledButton;
+      ? Styles.disabledButton
+      : Styles.enabledButton;
     return (
       <ScrollView>
         <KeyboardAvoidingView
           behavior="padding"
-          style={styles.container}
+          style={Styles.container}
           enabled
         >
           <Logo />
           <SocialMail />
-          <View style={styles.formWrapper}>
+          <View style={Styles.formWrapper}>
             <TextInput
               onChangeText={name => this.setState({ name })}
-              style={styles.input}
+              style={Styles.input}
               placeholder="Name"
               returnKeyType="next"
               underlineColorAndroid={"#cccccc"}
@@ -61,7 +61,7 @@ export default class Register extends React.Component {
 
             <TextInput
               onChangeText={email => this.setState({ email })}
-              style={styles.input}
+              style={Styles.input}
               returnKeyType="next"
               autoCapitalize="none"
               autoCorrect={false}
@@ -70,7 +70,7 @@ export default class Register extends React.Component {
             />
             <TextInput
               onChangeText={phoneNum => this.setState({ phoneNum })}
-              style={styles.input}
+              style={Styles.input}
               returnKeyType="next"
               autoCapitalize="none"
               placeholder="phone Num"
@@ -78,7 +78,7 @@ export default class Register extends React.Component {
             />
             <TextInput
               onChangeText={password => this.setState({ password })}
-              style={styles.input}
+              style={Styles.input}
               placeholder="Password"
               secureTextEntry={true}
               returnKeyType="next"
@@ -87,10 +87,10 @@ export default class Register extends React.Component {
             />
 
             <TextInput
-              onChangeText={password_confirmation =>
-                this.setState({ password_confirmation })
+              onChangeText={passwordConfirmation =>
+                this.setState({ passwordConfirmation })
               }
-              style={styles.input}
+              style={Styles.input}
               placeholder="Confirm Password"
               secureTextEntry={true}
               returnKeyType="go"
@@ -103,9 +103,9 @@ export default class Register extends React.Component {
                 this.onRegisterPress(this.state.email, this.state.password)
               }
               disabled={disabledValue}
-              style={[styles.submitLoginButton, extraButton]}
+              style={[Styles.submitLoginButton, extraButton]}
             >
-              <Text style={styles.buttonText}>Register</Text>
+              <Text style={Styles.buttonText}>Register</Text>
             </TouchableHighlight>
           </View>
         </KeyboardAvoidingView>

@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text } from "react-native";
-import { Styles } from "./Style__SocialMail";
+import { Styles } from "./SocialMail.css.js";
 import ButtonHighlight from "../ButtonHighlight";
 
 onPressFacebook = () => {
@@ -10,7 +10,7 @@ onPressGoogle = () => {
   console.log("google");
 };
 
-const SocialMail = props => {
+const SocialMail = () => {
   return (
     <View style={Styles.buttonWrapper}>
       <ButtonHighlight
