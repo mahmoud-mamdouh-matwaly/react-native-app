@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import {
-  TouchableHighlight,
   KeyboardAvoidingView,
   View,
   TextInput,
   Text,
   TouchableOpacity
 } from "react-native";
-import { Styles } from "./Style__LoginScreen";
+import { Styles } from "./LoginScreen.css.js";
 import Logo from "../Logo";
 import SocialMail from "../SocialMail";
 import ButtonHighlight from "../ButtonHighlight";
