@@ -1,7 +1,7 @@
 import { StyleSheet, Dimensions } from "react-native";
 const WINDOW = Dimensions.get("window");
 
-export const styles = StyleSheet.create({
+export const Styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "stretch",
