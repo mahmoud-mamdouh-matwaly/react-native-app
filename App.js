@@ -1,9 +1,7 @@
 import React from "react";
 import Routes from "./src/components/Routes";
-// import LoginScreen from "./src/components/LoginScreen";
+const App = () => {
+  return <Routes />;
+};
 
-export default class App extends React.Component {
-  render() {
-    return <Routes />;
-  }
-}
+export default App;
